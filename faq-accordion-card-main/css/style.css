@@ -1,0 +1,264 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Kumbh Sans', sans-serif;
+	line-height: 18px;
+	font-weight: 400, 700;
+	background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+li { 
+    list-style:none;
+}
+
+.dropdown-menutoggle {
+  position: relative;
+  min-width: 169px;
+  font-size: 12px;
+  text-align: left;
+  list-style: none;
+  background-color: none;
+}
+
+.dropdown-menutoggle li {
+  box-shadow: none !important;
+  padding-right: 20px;
+  margin-top: 10px;
+  color: hsl(240, 6%, 50%);
+}
+
+
+.qa label div:hover {
+    color: hsl(14, 88%, 65%);
+}
+
+[id*='toggle'] {
+    visibility: hidden;
+    appearance:none;
+    cursor:pointer;
+    left:-100%;
+    top:-100%;
+}
+[id*='toggle'] + label div{
+    cursor:pointer;
+    text-align: left;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+}
+
+[id*='toggle'] + label div:after {
+    content: url('../images/icon-arrow-down.svg'); 
+    transform: rotate(360deg);
+    float: right;
+}
+[id*='toggle']:checked + label div:after {
+    content: url('../images/icon-arrow-down.svg'); 
+    transform: rotate(180deg);
+    float: right;
+}
+
+[id*='toggle']:checked + label div {
+    font-weight: bold;
+    color: hsl(238, 29%, 16%);
+}
+
+[id*='toggle']:checked ~ .toggle-inside {
+    display: inline-block;
+}
+.toggle-wrapper div[class*='toggle-inside'] {
+    overflow: hidden;
+    box-sizing: border-box;
+    display: none;
+}
+
+/*For Devices (768px and down)*/
+@media only screen and (max-width: 768px) {
+	.grid {
+	    display: grid;
+		position: relative;
+		height: 535px;
+		margin: 147px 24px 120px 24px;
+		grid-template-rows: 1fr 3fr;
+		background-color: #fff;
+		border-radius: 23px;
+		box-shadow: 0 50px 50px -25px rgba(0, 0, 0, 0.300);
+	}
+
+	.a {
+		grid-row: 1 / span 1;
+	}
+	.b {
+		grid-row: 2 / span 1;
+		padding: 0 24px;
+	}
+
+	.bgpatterndesktop, .womandesktop {
+			display: none;
+	}
+
+	.bgpatternmobile {
+		width: 240px; left: 43px; bottom: 432px; position: absolute;
+	}
+
+	.womanmobile {
+		width: 238px; margin-right: auto; margin-left: auto; display: block; margin-top: -110px;
+	}
+
+	.box {
+		width: 95px; position: absolute; top: 104px; left: 65px; z-index: 1;
+		filter: drop-shadow(-3px 35px 30px rgba(0, 0, 0, 0.220));
+        filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.220));
+	}
+
+	.faqcontent {
+		margin-top: 23px;
+	}
+
+	.faqitem {
+		border-bottom: 1px solid hsl(240, 5%, 91%); padding-bottom: 14px;
+	}
+
+	.title {
+		text-align: center; margin-top: 10px; font-size: 32px; color: hsl(238, 29%, 16%);
+	}
+    .qa label div {
+        color: hsl(238, 29%, 16%);
+        font-size: 13px;
+    }
+
+}
+
+/*For Devices (769px and up)*/
+@media only screen and (min-width: 769px) {
+    .grid {
+        display: grid;
+        position: relative;
+        margin: 129px 107px 130px 138px;
+        grid-template-columns: repeat(2, 1fr);
+        background-color: #fff;
+        border-radius: 23px;
+        padding: 60px 30px 75px 0px;
+        grid-column-gap: 62px;
+        box-shadow: 0 60px 40px -25px rgba(0, 0, 0, 0.220);
+        overflow: hidden;
+    }
+
+    .a {
+        grid-column: 1 / span 1;
+    }
+    .b {
+        grid-column: 2 / span 1;
+        padding-right: 80px;
+    }
+
+    .title {
+        margin-top: 18px; font-size: 32px;
+    }
+
+    .faqcontent {
+        margin-top: 28px;
+    }
+
+    .faqitem {
+        border-bottom: 1px solid hsl(240, 5%, 91%); padding-bottom: 14px;
+        border-bottom-width: 100%;
+    }
+
+
+    .bgpatterndesktop {
+        width: 950px; right: 530px; top: -285px; position: absolute;
+    }
+
+    .womandesktop {
+        width: 472px; margin-left: -82px; margin-top: 12px;
+    }
+
+    .box {
+        width: 190px; position: absolute; left: 47px; top: 335px; z-index: 1;
+        filter: drop-shadow(-1px 20px 30px rgba(0, 0, 0, 0.220));
+    }
+
+    .bgpatternmobile, .womanmobile {
+        display: none;
+    }
+    .qa label div {
+        color: hsl(238, 29%, 16%);
+        font-size: 14px;
+    }
+    .dropdown-menutoggle li {
+      padding-right: 10px;
+      margin-top: 8px;
+    }
+}
+
+/*For Devices (1025px and up)*/
+@media only screen and (min-width: 1025px) {
+	.grid {
+		display: grid;
+		position: relative;
+		margin: 129px 239px 130px 281px;
+		grid-template-columns: repeat(2, 1fr);
+		background-color: #fff;
+		border-radius: 23px;
+		padding: 60px 30px 75px 0px;
+		grid-column-gap: 62px;
+		box-shadow: 0 60px 40px -25px rgba(0, 0, 0, 0.220);
+		overflow: hidden;
+	}
+
+	.a {
+		grid-column: 1 / span 1;
+	}
+	.b {
+		grid-column: 2 / span 1;
+		padding-right: 80px;
+	}
+
+	.title {
+		margin-top: 18px; font-size: 32px;
+	}
+
+	.faqcontent {
+		margin-top: 28px;
+	}
+
+	.faqitem {
+		border-bottom: 1px solid hsl(240, 5%, 91%); padding-bottom: 14px;
+		border-bottom-width: 100%;
+	}
+
+
+	.bgpatterndesktop {
+		width: 950px; right: 530px; top: -285px; position: absolute;
+	}
+
+	.womandesktop {
+		width: 472px; margin-left: -82px; margin-top: 12px;
+	}
+
+	.box {
+		width: 190px; position: absolute; left: 190px; top: 335px; z-index: 1;
+      	filter: drop-shadow(-1px 20px 30px rgba(0, 0, 0, 0.220));
+	}
+
+	.bgpatternmobile, .womanmobile {
+		display: none;
+	}
+	.qa label div {
+	    color: hsl(238, 29%, 16%);
+	    font-size: 14px;
+	}
+    .dropdown-menutoggle li {
+      padding-right: 10px;
+      margin-top: 8px;
+    }
+}
+
+
+
+
+
+
+
