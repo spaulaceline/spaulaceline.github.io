@@ -7,6 +7,7 @@ body {
 	line-height: 18px;
 	font-weight: 400, 700;
 	background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+	height: 100vh;
 }
 
 li { 
@@ -103,13 +104,11 @@ li {
 	}
 
 	.womanmobile {
-		width: 238px; margin-right: auto; margin-left: auto; display: block; margin-top: -110px;
+		width: 260px; margin-left: 20px; margin-top: -110px;
 	}
 
 	.box {
-		width: 95px; position: absolute; top: 104px; left: 65px; z-index: 1;
-		filter: drop-shadow(-3px 35px 30px rgba(0, 0, 0, 0.220));
-        filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.220));
+		display: none;
 	}
 
 	.faqcontent {
@@ -123,11 +122,10 @@ li {
 	.title {
 		text-align: center; margin-top: 10px; font-size: 32px; color: hsl(238, 29%, 16%);
 	}
-    .qa label div {
-        color: hsl(238, 29%, 16%);
-        font-size: 13px;
-    }
-
+    	.qa label div {
+        	color: hsl(238, 29%, 16%);
+        	font-size: 13px;
+    	}
 }
 
 /*For Devices (769px and up)*/
