@@ -1,0 +1,158 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+      font-family: 'Barlow Semi Condensed', sans-serif;
+      font-weight: 500;
+      font-size: 13px;
+      height: 100vh;
+      color: hsl(193, 4%, 94%);
+      background-color: hsl(210, 46%, 95%);
+}
+.row {
+	display: grid;
+	position: relative;
+	grid-template-columns: 100%;
+	margin: 71px 24px;
+	grid-row-gap: 25px;
+}
+.col {
+	padding: 25px 33px;
+	border-radius: 8px;
+	min-width: 200px;
+	position: relative;
+}
+.card-a {
+	z-index: 1;
+	background-color: hsl(263, 55%, 52%);
+	border: 1px solid hsl(263, 55%, 39%);
+	box-shadow: 30px 45px 50px -45px rgba(0, 0, 0, 0.300);
+}
+.card-b {
+	background-color: hsl(217, 19%, 35%);
+	border: 1px solid hsl(217, 19%, 22%);
+	box-shadow: 30px 45px 50px -45px rgba(0, 0, 0, 0.300);
+}
+.card-c, .card-e {
+	background-color: hsl(0, 0%, 100%);
+	color: hsl(217, 19%, 35%);
+	box-shadow: 35px 55px 50px -45px rgba(0, 0, 0, 0.200);
+}
+.card-d {
+	background-color: hsl(219, 29%, 14%);
+	border: 1px solid hsl(219, 29%, 12%);
+	box-shadow: 30px 45px 50px -45px rgba(0, 0, 0, 0.300);
+}
+.pattern {
+  position: absolute;
+  top: 0;
+  right: 1.4rem;
+  z-index: 2;
+}
+.header {
+	display: flex;
+}
+.profile-pic {
+	border-radius: 100%;
+	width: 28px;
+	height: auto;
+}
+.profile {
+	margin-left: 15px;
+	align-self: center;
+}
+.border-white {
+	border: 2px solid hsla(0, 0%, 100%, 50%);
+}
+.border-violet {
+	border: 2px solid hsl(263, 55%, 52%);
+}
+.main-review {
+	font-size: 20px;
+	font-weight: 500 !important;
+	margin-top: 17px;
+	line-height: 24px;
+	position: relative;
+	z-index: 3;
+}
+.white-verified {
+	opacity: 50%;
+}
+.white-quote-review {
+	opacity: 70%;
+	margin-top: 17px;
+	line-height: 18px;
+	word-spacing: 1.3px;
+}
+.gray-verified {
+	opacity: 50%;
+}
+.gray-quote-review {
+	color: hsl(217, 19%, 35%) !important;
+	opacity: 70%;
+	margin-top: 17px;
+	line-height: 18px;
+}
+
+@media (min-width: 1350px) {
+	.row {
+		height: 572px;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		margin: 164px 165px;
+		grid-gap: 25px 30px;
+	}
+	.col {
+		padding: 25px 30px;
+	}
+	.card-a {
+		grid-column: 1 / span 2;
+	}
+	.card-b {
+		grid-column: 3 / span 1;
+	}
+	.card-c {
+		grid-row: 2 / span 1;
+		grid-column: 1 / span 1;
+	}
+	.card-d {
+		grid-row: 2 / span 1;
+		grid-column: 2 / span 2;
+	}
+	.card-e {
+		grid-row: 1 / span 2;
+	}
+	.main-review {
+		font-size: 20px;
+	}
+	.pattern {
+		right: 4.9rem;
+	}
+	.white-quote-review {
+		word-spacing: 0px;
+	}
+	.gray-quote-review {
+		word-spacing: 0.9px;
+	}
+	.break {
+		word-spacing: 2.5px;
+	}
+}
+
+@media (min-width: 2000px) {
+	body {
+		font-size: 23px;
+	}
+	.profile-pic {
+		width: auto;
+		height: auto;
+	}
+	.main-review {
+		font-size: 30px;
+		line-height: 31px;
+	}
+	.white-quote-review, .gray-quote-review {
+		line-height: 24px;
+	}
+}
